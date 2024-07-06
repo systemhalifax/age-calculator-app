@@ -22,17 +22,40 @@
     <div class="header">
       <div class="header__day">
         <p class="header__date-text">DAY</p>
-        <input class="header__date-input" placeholder="DD">
+        <input class="js-header__day-input header__date-input" placeholder="DD">
       </div>
 
       <div class="header__month">
         <p class="header__date-text">MONTH</p>
-        <input class="header__date-input" placeholder="MM">
+        <input class="js-header__month-input header__date-input" placeholder="MM">
       </div>
 
       <div class="header__year">
         <p class="header__date-text">YEAR</p>
-        <input class="header__date-input" placeholder="YYYY">
+        <input class="js-header__year-input header__date-input" placeholder="YYYY">
+      </div>
+
+      <div>
+        <button class="js-header__calculate-button header__calculate-button">
+          <img class="header__calculate-image" src="assets/images/icon-arrow.svg">
+        </button>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="result__container">
+        <div class="js-result__years result__answer">&ndash; &ndash;</div>
+        <p class="result__text">years</p>
+      </div>
+
+      <div class="result__container">
+        <p class="js-result__months result__answer">&ndash; &ndash;</p>
+        <p class="result__text">months</p>
+      </div>
+
+      <div class="result__container">
+        <p class="js-result__days result__answer">&ndash; &ndash;</p>
+        <p class="result__text">days</p>
       </div>
     </div>
   </div>
@@ -43,5 +66,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Reinhard Kent</a>.
   </div>
+
+<script type="module" src="assets/scripts/script.js"></script>
 </body>
 </html>

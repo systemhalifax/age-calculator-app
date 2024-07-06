@@ -8,22 +8,26 @@ p {
 }
 
 .main {
-  display: flex;
   margin: auto;
   background-color:white;
   width: 720px;
   height: 500px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30%;
 }
 
 .header {
   display: flex;
   align-items:center;
   column-gap: 20px;
-  border-bottom: 2px solid rgb(238, 238, 238);
+  border-bottom: 1px solid rgb(233, 233, 233);
   margin-right: 100px;
   margin-left: 50px;
-  width: 90%;
+  width: 80%;
   height: 30%;
+  position: relative;
 }
 
 .header__date-text {
@@ -33,12 +37,70 @@ p {
 }
 
 .header__date-input {
-  color: rgb(201, 200, 200);
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 800;
   width: 110px;
   padding: 13px;
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid rgb(230, 230, 230);
+  outline: none;
+}
+
+.header__date-input:focus {
+  outline: 1px solid rgb(192, 144, 255);
+}
+
+.header__calculate-button {
+  background-color: rgb(143, 59, 253);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: -36px;
+  right: -40px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15); /* Shadow to create the 3D effect */
+  transition: all 0.1s ease-in-out; /* Smooth transition for the click effect */
+}
+
+.header__calculate-button:active {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15); /* Adjusted shadow to give the pressed effect */
+  transform: translateY(4px); /* Moves the button down when clicked */
+}
+
+.header__calculate-image {
+  object-fit: cover;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result__container {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+
+.result__text {
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 950;
+}
+
+.result__answer {
+  color: rgb(143, 59, 253);;
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 950;
+}
+
+.attribution {
+  margin-top: 20px;
 }
