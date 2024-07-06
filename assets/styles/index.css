@@ -3,8 +3,42 @@ body {
   background-color: rgb(219, 219, 219);
 }
 
+p {
+  margin: 0;
+}
+
 .main {
+  display: flex;
+  margin: auto;
   background-color:white;
-  width: 500px;
+  width: 720px;
   height: 500px;
+}
+
+.header {
+  display: flex;
+  align-items:center;
+  column-gap: 20px;
+  border-bottom: 2px solid rgb(238, 238, 238);
+  margin-right: 100px;
+  margin-left: 50px;
+  width: 90%;
+  height: 30%;
+}
+
+.header__date-text {
+  color: rgb(138, 138, 138);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.header__date-input {
+  color: rgb(201, 200, 200);
+  font-size: 20px;
+  font-weight: 800;
+  width: 110px;
+  padding: 13px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(230, 230, 230);
 }
