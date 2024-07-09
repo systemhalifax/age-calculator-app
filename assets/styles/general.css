@@ -3,3 +3,9 @@ body {
   background-color: hsl(0, 0%, 94%);
   padding-left: 90px;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
