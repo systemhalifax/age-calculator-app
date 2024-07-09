@@ -8,61 +8,60 @@
   <title>Frontend Mentor | Age calculator app</title>
 
   <link rel="stylesheet" href="assets/styles/fonts.css">
+  <link rel="stylesheet" href="assets/styles/general.css">
   <link rel="stylesheet" href="assets/styles/index.css">
 </head>
 <body>
 
-  <div class="main">
-    <div class="header">
-      <div class="header__date-input-wrapper">
-        <p class="header__input-text">DAY</p>
-        <input class="js-header__input-days header__date-input" placeholder="DD">
-        <div class="error-message"></div>
-      </div>
-      
-      <div class="header__date-input-wrapper">
-        <p class="header__input-text">MONTH</p>
-        <input class="js-header__input-months header__date-input" placeholder="MM">
-        <div class="error-message"></div>
-      </div>
-
-      <div class="header__date-input-wrapper">
-        <p class="header__input-text">YEAR</p>
-        <input class="js-header__input-years header__date-input" placeholder="YYYY">
-        <div class="error-message"></div>
-      </div>
-
-      <div>
-        <button class="js-header__calculate-button header__calculate-button">
-          <img class="header__calculate-image" src="assets/images/icon-arrow.svg">
-        </button>
-      </div>
+<main class="age-calculator">
+  <div class="age-calculator__input-group">
+    <div class="age-calculator__input-wrapper">
+      <label class="age-calculator__label" for="days">DAY</label>
+      <input id="days" class="age-calculator__input js-age-calculator__input-days" placeholder="DD">
+      <div class="age-calculator__error-message"></div>
+    </div>
+    
+    <div class="age-calculator__input-wrapper">
+      <label class="age-calculator__label" for="months">MONTH</label>
+      <input id="months" class="age-calculator__input js-age-calculator__input-months" placeholder="MM">
+      <div class="age-calculator__error-message"></div>
     </div>
 
-    <div class="section">
-      <div class="result__container">
-        <div class="js-result__years result__answer">&ndash; &ndash;</div>
-        <p class="result__text">years</p>
-      </div>
+    <div class="age-calculator__input-wrapper">
+      <label class="age-calculator__label" for="years">YEAR</label>
+      <input id="years" class="age-calculator__input js-age-calculator__input-years" placeholder="YYYY">
+      <div class="age-calculator__error-message"></div>
+    </div>
 
-      <div class="result__container">
-        <p class="js-result__months result__answer">&ndash; &ndash;</p>
-        <p class="result__text">months</p>
-      </div>
-
-      <div class="result__container">
-        <p class="js-result__days result__answer">&ndash; &ndash;</p>
-        <p class="result__text">days</p>
-      </div>
+    <div class="age-calculator__button-wrapper">
+      <button class="age-calculator__button js-age-calculator__calculate-button">
+        <img class="age-calculator__button-icon" src="assets/images/icon-arrow.svg">
+      </button>
     </div>
   </div>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor
 
-    </a>.
-    Coded by <a href="#">Reinhard Kent</a>.
+  <div class="age-calculator__results">
+    <div class="age-calculator__result">
+      <span class="age-calculator__result-value js-age-calculator__result-years">&ndash; &ndash;</span>
+      <span class="age-calculator__result-label">years</span>
+    </div>
+
+    <div class="age-calculator__result">
+      <span class="age-calculator__result-value js-age-calculator__result-months">&ndash; &ndash;</span>
+      <span class="age-calculator__result-label">months</span>
+    </div>
+
+    <div class="age-calculator__result">
+      <span class="age-calculator__result-value js-age-calculator__result-days">&ndash; &ndash;</span>
+      <span class="age-calculator__result-label">days</span>
+    </div>
   </div>
+</main>
+
+<footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Reinhard Kent</a>.
+</footer>
 
 <script type="module" src="assets/scripts/main.js"></script>
 </body>

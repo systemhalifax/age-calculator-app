@@ -1,14 +1,4 @@
-body {
-  font-family: Poppins, sans-serif;
-  background-color: hsl(0, 0%, 94%);
-  padding-top: 60px;
-}
-
-p {
-  margin: 0;
-}
-
-.main {
+.age-calculator {
   margin: auto;
   background-color:hsl(0, 0%, 100%);
   width: 720px;
@@ -19,7 +9,7 @@ p {
   border-bottom-right-radius: 30%;
 }
 
-.header {
+.age-calculator__input-group {
   display: flex;
   align-items:center;
   column-gap: 20px;
@@ -32,13 +22,13 @@ p {
   position: relative;
 }
 
-.header__input-text {
+.age-calculator__label {
   color: hsl(0, 1%, 44%);
   font-size: 12px;
   font-weight: 800;
 }
 
-.header__date-input {
+.age-calculator__input {
   font-size: 30px;
   font-weight: 800;
   width: 110px;
@@ -49,15 +39,42 @@ p {
   outline: none;
 }
 
-.header__date-input::placeholder {
+.age-calculator__input::placeholder {
   color: hsl(0, 1%, 44%);
 }
 
-.header__date-input:focus {
+.age-calculator__input:focus {
   outline: 1px solid rgb(192, 144, 255);
 }
 
-.header__calculate-button {
+.age-calculator__error-message {
+  position: absolute;
+  color: hsl(0, 100%, 67%);
+  font-style: italic;
+  margin-top: 5px;
+  margin-left: 2px;
+  font-size: 11px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.error .age-calculator__error-message {
+  opacity: 1;
+}
+
+.error .age-calculator__label {
+  color: hsl(0, 100%, 67%);
+}
+
+.error .age-calculator__input {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+
+.error .age-calculator__input:focus {
+  outline: none;
+}
+
+.age-calculator__button {
   background-color: hsl(259, 100%, 65%);
   width: 70px;
   height: 70px;
@@ -71,28 +88,28 @@ p {
   transition: all 0.15s ease-in-out; /* Smooth transition for the click effect */
 }
 
-.header__calculate-button:hover {
+.age-calculator__button:hover {
   background-color: hsl(0, 0%, 8%);
 }
 
-.header__calculate-button:active {
+.age-calculator__button:active {
   background-color: hsl(0, 0%, 8%);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15); /* Adjusted shadow to give the pressed effect */
   transform: translateY(4px); /* Moves the button down when clicked */
 }
 
-.header__calculate-image {
+.age-calculator__button-icon {
   object-fit: cover;
 }
 
-.section {
+.age-calculator__results {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 20px;
 }
 
-.result__container {
+.age-calculator__result {
   display: flex;
   align-items: center;
   column-gap: 10px;
@@ -100,66 +117,25 @@ p {
   margin-left: 50px;
 }
 
-.result__text {
-  color: hsl(0, 0%, 8%);
-  font-size: 70px;
-  font-style: italic;
-  font-weight: 950;
-}
-
-.result__answer {
+.age-calculator__result-value {
   color: hsl(259, 100%, 65%);
   font-size: 70px;
   font-style: italic;
   font-weight: 950;
 }
 
-.error-message {
-  position: absolute;
-  color: hsl(0, 100%, 67%);
+.age-calculator__result-label {
+  color: hsl(0, 0%, 8%);
+  font-size: 70px;
   font-style: italic;
-  margin-top: 5px;
-  margin-left: 2px;
-  font-size: 11px;
-  pointer-events: none;
-  opacity: 0;
+  font-weight: 950;
 }
-
-.error .error-message {
-  opacity: 1;
-}
-
-.error .header__input-text {
-  color: hsl(0, 100%, 67%);
-}
-
-.error .header__date-input {
-  border: 1px solid hsl(0, 100%, 67%);
-}
-
-.error .header__date-input:focus {
-  outline: none;
-}
-
-
-/* 
-.true {
-  opacity: 1;
-}
-
-.is-invalid-input{
-  border: 1px solid hsl(0, 100%, 67%);
-}
-
-.is-invalid {
-  color: hsl(0, 100%, 67%);
-} */
 
 .attribution { 
   font-size: 11px; text-align: center;
   margin-top: 20px;
-
 }
+
 .attribution a { 
   color: hsl(228, 45%, 44%);
 }
