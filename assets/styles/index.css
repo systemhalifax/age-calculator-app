@@ -1,46 +1,53 @@
 .age-calculator {
   margin: auto;
   background-color:hsl(0, 0%, 100%);
-  width: 720px;
-  height: 550px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 30%;
+  width: 840px;
+  height: 650px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 200px;
 }
 
 .age-calculator__input-group {
   display: flex;
   align-items:center;
-  column-gap: 20px;
   border-bottom: 1px solid hsl(0, 0%, 86%);
-  margin-right: 100px;
-  margin-left: 30px;
+  column-gap: 31px;
+  margin-right: 20px;
+  margin-left: 57px;
   padding-bottom: 20px;
-  width: 80%;
-  height: 30%;
+  width: 700px;
+  height: 185px;
   position: relative;
+}
+
+.age-calculator__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 7px;
+  margin-top: 28px;
 }
 
 .age-calculator__label {
   color: hsl(0, 1%, 44%);
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .age-calculator__input {
   font-size: 30px;
   font-weight: 800;
   width: 110px;
-  padding: 13px;
-  margin-top: 5px;
-  border-radius: 5px;
+  padding: 15px 24px;
+  border-radius: 7px;
   border: 1px solid rgb(230, 230, 230);
   outline: none;
 }
 
 .age-calculator__input::placeholder {
-  color: hsl(0, 1%, 44%);
+  color: hsl(0, 0%, 54%)
 }
 
 .age-calculator__input:focus {
@@ -76,14 +83,14 @@
 
 .age-calculator__button {
   background-color: hsl(259, 100%, 65%);
-  width: 70px;
-  height: 70px;
+  width: 94px;
+  height: 94px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   position: absolute;
-  bottom: -36px;
-  right: -40px;
+  bottom: -47px;
+  right: -26px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15); /* Shadow to create the 3D effect */
   transition: all 0.15s ease-in-out; /* Smooth transition for the click effect */
 }
@@ -103,32 +110,31 @@
 }
 
 .age-calculator__results {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 20px;
+  display: block;
+  margin-top: 29px;
 }
 
 .age-calculator__result {
   display: flex;
   align-items: center;
-  column-gap: 10px;
-  margin-right: 100px;
+  column-gap: 13px;
   margin-left: 50px;
 }
 
 .age-calculator__result-value {
   color: hsl(259, 100%, 65%);
-  font-size: 70px;
+  font-size: 89px;
   font-style: italic;
   font-weight: 950;
+  line-height: 1.4;
 }
 
 .age-calculator__result-label {
   color: hsl(0, 0%, 8%);
-  font-size: 70px;
+  font-size: 100px;
   font-style: italic;
   font-weight: 950;
+  line-height: 0;
 }
 
 .attribution { 
