@@ -4,15 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">  
   <title>Frontend Mentor | Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
   <link rel="stylesheet" href="assets/styles/fonts.css">
   <link rel="stylesheet" href="assets/styles/index.css">
 </head>
@@ -20,19 +14,22 @@
 
   <div class="main">
     <div class="header">
-      <div class="header__day">
-        <p class="header__date-text">DAY</p>
-        <input class="js-header__day-input header__date-input" placeholder="DD">
+      <div class="header__date-input-wrapper">
+        <p class="header__input-text">DAY</p>
+        <input class="js-header__input-days header__date-input" placeholder="DD">
+        <div class="error-message"></div>
+      </div>
+      
+      <div class="header__date-input-wrapper">
+        <p class="header__input-text">MONTH</p>
+        <input class="js-header__input-months header__date-input" placeholder="MM">
+        <div class="error-message"></div>
       </div>
 
-      <div class="header__month">
-        <p class="header__date-text">MONTH</p>
-        <input class="js-header__month-input header__date-input" placeholder="MM">
-      </div>
-
-      <div class="header__year">
-        <p class="header__date-text">YEAR</p>
-        <input class="js-header__year-input header__date-input" placeholder="YYYY">
+      <div class="header__date-input-wrapper">
+        <p class="header__input-text">YEAR</p>
+        <input class="js-header__input-years header__date-input" placeholder="YYYY">
+        <div class="error-message"></div>
       </div>
 
       <div>
@@ -59,14 +56,14 @@
       </div>
     </div>
   </div>
-
-
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor
+
+    </a>.
     Coded by <a href="#">Reinhard Kent</a>.
   </div>
 
-<script type="module" src="assets/scripts/script.js"></script>
+<script type="module" src="assets/scripts/main.js"></script>
 </body>
-</html>
+</html> 

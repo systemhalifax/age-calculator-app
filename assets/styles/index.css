@@ -1,6 +1,7 @@
 body {
   font-family: Poppins, sans-serif;
-  background-color: rgb(219, 219, 219);
+  background-color: hsl(0, 0%, 94%);
+  padding-top: 60px;
 }
 
 p {
@@ -9,9 +10,9 @@ p {
 
 .main {
   margin: auto;
-  background-color:white;
+  background-color:hsl(0, 0%, 100%);
   width: 720px;
-  height: 500px;
+  height: 550px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -22,16 +23,17 @@ p {
   display: flex;
   align-items:center;
   column-gap: 20px;
-  border-bottom: 1px solid rgb(233, 233, 233);
+  border-bottom: 1px solid hsl(0, 0%, 86%);
   margin-right: 100px;
-  margin-left: 50px;
+  margin-left: 30px;
+  padding-bottom: 20px;
   width: 80%;
   height: 30%;
   position: relative;
 }
 
-.header__date-text {
-  color: rgb(138, 138, 138);
+.header__input-text {
+  color: hsl(0, 1%, 44%);
   font-size: 12px;
   font-weight: 800;
 }
@@ -47,12 +49,16 @@ p {
   outline: none;
 }
 
+.header__date-input::placeholder {
+  color: hsl(0, 1%, 44%);
+}
+
 .header__date-input:focus {
   outline: 1px solid rgb(192, 144, 255);
 }
 
 .header__calculate-button {
-  background-color: rgb(143, 59, 253);
+  background-color: hsl(259, 100%, 65%);
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -62,10 +68,15 @@ p {
   bottom: -36px;
   right: -40px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15); /* Shadow to create the 3D effect */
-  transition: all 0.1s ease-in-out; /* Smooth transition for the click effect */
+  transition: all 0.15s ease-in-out; /* Smooth transition for the click effect */
+}
+
+.header__calculate-button:hover {
+  background-color: hsl(0, 0%, 8%);
 }
 
 .header__calculate-button:active {
+  background-color: hsl(0, 0%, 8%);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15); /* Adjusted shadow to give the pressed effect */
   transform: translateY(4px); /* Moves the button down when clicked */
 }
@@ -78,29 +89,77 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .result__container {
   display: flex;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 10px;
   margin-right: 100px;
   margin-left: 50px;
 }
 
 .result__text {
+  color: hsl(0, 0%, 8%);
   font-size: 70px;
   font-style: italic;
   font-weight: 950;
 }
 
 .result__answer {
-  color: rgb(143, 59, 253);;
+  color: hsl(259, 100%, 65%);
   font-size: 70px;
   font-style: italic;
   font-weight: 950;
 }
 
-.attribution {
+.error-message {
+  position: absolute;
+  color: hsl(0, 100%, 67%);
+  font-style: italic;
+  margin-top: 5px;
+  margin-left: 2px;
+  font-size: 11px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.error .error-message {
+  opacity: 1;
+}
+
+.error .header__input-text {
+  color: hsl(0, 100%, 67%);
+}
+
+.error .header__date-input {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+
+.error .header__date-input:focus {
+  outline: none;
+}
+
+
+/* 
+.true {
+  opacity: 1;
+}
+
+.is-invalid-input{
+  border: 1px solid hsl(0, 100%, 67%);
+}
+
+.is-invalid {
+  color: hsl(0, 100%, 67%);
+} */
+
+.attribution { 
+  font-size: 11px; text-align: center;
   margin-top: 20px;
+
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%);
 }
