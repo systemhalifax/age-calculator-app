@@ -2,12 +2,19 @@ body {
   font-family: Poppins, sans-serif;
   background-color: hsl(0, 0%, 94%);
   overflow: hidden;
+  margin-top: 85px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media (min-width: 480px) {
+  body {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 800px) {
