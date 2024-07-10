@@ -37,4 +37,4 @@ Users should be able to:
 
 ## Author
 
-- [Reinhard Kent](https://www.your-site.com)
+- [Reinhard Kent](#)
