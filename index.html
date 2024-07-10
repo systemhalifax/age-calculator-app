@@ -4,28 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">  
+  <title>Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
   <link rel="stylesheet" href="assets/styles/fonts.css">
+  <link rel="stylesheet" href="assets/styles/general.css">
   <link rel="stylesheet" href="assets/styles/index.css">
 </head>
 <body>
 
-  <div class="main">
+<main class="age-calculator">
+  <div class="age-calculator__input-group">
+    <div class="age-calculator__input-wrapper">
+      <label class="age-calculator__label" for="day">D A Y</label>
+      <input id="days" type="number" class="age-calculator__input js-age-calculator__input-day" placeholder="DD">
+      <div class="age-calculator__error-message"></div>
+    </div>
+    
+    <div class="age-calculator__input-wrapper">
+      <label class="age-calculator__label" for="month">M O N T H</label>
+      <input id="months" type="number" class="age-calculator__input js-age-calculator__input-month" placeholder="MM">
+      <div class="age-calculator__error-message"></div>
+    </div>
+
+    <div class="age-calculator__input-wrapper">
+      <label class="age-calculator__label" for="year">Y E A R</label>
+      <input id="years" type="number" class="age-calculator__input js-age-calculator__input-year" placeholder="YYYY">
+      <div class="age-calculator__error-message"></div>
+    </div>
+
+    <div class="age-calculator__button-wrapper">
+      <button class="age-calculator__button js-age-calculator__calculate-button">
+        <img class="age-calculator__button-icon" src="assets/images/icon-arrow.svg">
+      </button>
+    </div>
   </div>
 
+  <div class="age-calculator__results">
+    <div class="age-calculator__result">
+      <span class="age-calculator__result-value js-age-calculator__result-years">&ndash; &ndash;</span>
+      <span class="age-calculator__result-label">years</span>
+    </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Reinhard Kent</a>.
+    <div class="age-calculator__result">
+      <span class="age-calculator__result-value js-age-calculator__result-months">&ndash; &ndash;</span>
+      <span class="age-calculator__result-label">months</span>
+    </div>
+
+    <div class="age-calculator__result">
+      <span class="age-calculator__result-value js-age-calculator__result-days">&ndash; &ndash;</span>
+      <span class="age-calculator__result-label">days</span>
+    </div>
   </div>
+</main>
+
+<footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Reinhard Kent</a>.
+</footer>
+
+<script type="module" src="assets/scripts/main.js"></script>
 </body>
-</html>
+</html> 
